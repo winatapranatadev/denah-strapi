@@ -25,20 +25,24 @@
       "type": "richtext"
     },
     "product_image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "locations": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::location.location",
       "inversedBy": "products"
+    },
+    "image": {
+      "type": "richtext"
     }
   }
 }
