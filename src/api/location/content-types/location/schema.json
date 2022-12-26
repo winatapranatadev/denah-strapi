@@ -4,7 +4,8 @@
   "info": {
     "singularName": "location",
     "pluralName": "locations",
-    "displayName": "location"
+    "displayName": "location",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,19 +16,21 @@
       "type": "string"
     },
     "location_preview": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "products": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::product.product"
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "locations"
     }
   }
 }
