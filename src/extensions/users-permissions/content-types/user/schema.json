@@ -63,9 +63,9 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "booking": {
+    "bookings": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::booking.booking",
       "mappedBy": "users_permissions_user"
     }
